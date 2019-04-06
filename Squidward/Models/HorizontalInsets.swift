@@ -23,9 +23,9 @@
 
 import UIKit
 
-public struct HorizontalInsets: Equatable {
+public struct HorizontalInsets: Hashable, Codable {
 
-    public static var zero = HorizontalInsets()
+    public static let zero = HorizontalInsets()
 
     /// The left constant.
     public var left: CGFloat

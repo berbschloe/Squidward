@@ -42,6 +42,12 @@ class LayoutTests: XCTestCase {
         [view, otherView].forEach { superView.addSubview($0) }
     }
 
+    override func tearDown() {
+        superView = nil
+        view = nil
+        otherView = nil
+    }
+
     func testEdgeConstraints() {
 
         var constraint: LayoutEdgeConstraints!
@@ -58,7 +64,7 @@ class LayoutTests: XCTestCase {
     func testDirectionalEdgeConstraints() {
 
         var constraint: LayoutDirectionalEdgeConstraints!
-        let insets = DirectionalEdgeInsets(top: 10, leading: 20, bottom: 30, trailing: 40)
+        let insets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 30, trailing: 40)
 
         NSLayoutConstraint.activate([
             view.directionalEdgeAnchors.constraint(equalTo: superView.directionalEdgeAnchors, constant: insets)

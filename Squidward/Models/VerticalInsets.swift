@@ -25,7 +25,7 @@ import Foundation
 
 public struct VerticalInsets: Equatable {
 
-    public static var zero = VerticalInsets()
+    public static let zero = VerticalInsets()
 
     // The top constant.
     public var top: CGFloat

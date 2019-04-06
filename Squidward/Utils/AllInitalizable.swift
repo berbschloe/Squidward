@@ -23,74 +23,80 @@
 
 import CoreGraphics
 
-public protocol ExpressibleByCGFloatLiteral: ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
-    init(cgFloatValue value: CGFloat)
+public protocol AllInitalizable {
+
+    associatedtype Value
+
+    init(all value: Value)
 }
 
-extension ExpressibleByCGFloatLiteral {
+extension AllInitalizable where Self: ExpressibleByIntegerLiteral, Self.Value == CGFloat {
 
     public init(integerLiteral value: Int) {
-        self.init(cgFloatValue: CGFloat(value))
-    }
-
-    public init(floatLiteral value: Float) {
-        self.init(cgFloatValue: CGFloat(value))
+        self.init(all: CGFloat(value))
     }
 }
 
-extension UIEdgeInsets: ExpressibleByCGFloatLiteral {
+extension AllInitalizable where Self: ExpressibleByFloatLiteral, Self.Value == CGFloat  {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(floatLiteral value: Float) {
+        self.init(all: CGFloat(value))
+    }
+}
+
+extension UIEdgeInsets: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
+
+    public init(all value: CGFloat) {
         self.init(top: value, left: value, bottom: value, right: value)
     }
 }
 
-extension CGSize: ExpressibleByCGFloatLiteral {
+extension CGSize: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(all value: CGFloat) {
         self.init(width: value, height: value)
     }
 }
 
-extension UIOffset: ExpressibleByCGFloatLiteral {
+extension UIOffset: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(all value: CGFloat) {
         self.init(horizontal: value, vertical: value)
     }
 }
 
-extension DirectionalEdgeInsets: ExpressibleByCGFloatLiteral {
+extension DirectionalEdgeInsets: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(all value: CGFloat) {
         self.init(top: value, leading: value, bottom: value, trailing: value)
     }
 }
 
-extension VerticalInsets: ExpressibleByCGFloatLiteral {
+extension VerticalInsets: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(all value: CGFloat) {
         self.init(top: value, bottom: value)
     }
 }
 
-extension HorizontalInsets: ExpressibleByCGFloatLiteral {
+extension HorizontalInsets: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(all value: CGFloat) {
         self.init(left: value, right: value)
     }
 }
 
-extension DirectionalHorizontalInsets: ExpressibleByCGFloatLiteral {
+extension DirectionalHorizontalInsets: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(all value: CGFloat) {
         self.init(leading: value, trailing: value)
     }
 }
 
 @available(iOS 11.0, *)
-extension NSDirectionalEdgeInsets: ExpressibleByCGFloatLiteral {
+extension NSDirectionalEdgeInsets: AllInitalizable, ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
-    public init(cgFloatValue value: CGFloat) {
+    public init(all value: CGFloat) {
         self.init(top: value, leading: value, bottom: value, trailing: value)
     }
 }

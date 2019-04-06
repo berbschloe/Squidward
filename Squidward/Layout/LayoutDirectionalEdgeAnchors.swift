@@ -56,7 +56,8 @@ public class LayoutDirectionalEdgeAnchors {
 
      - returns: The newly constructed set of deactivated layout edge constraints.
      */
-    public func constraint(edges: DirectionalRectEdge = .all,
+    @available(iOS, obsoleted:11.0)
+    public func sw_constraint(edges: DirectionalRectEdge = .all,
                            equalTo anchors: LayoutDirectionalEdgeAnchors,
                            constant: DirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
 
@@ -77,7 +78,8 @@ public class LayoutDirectionalEdgeAnchors {
         )
     }
 
-    public func constraint(edges: DirectionalRectEdge = .all,
+    @available(iOS, obsoleted:11.0)
+    public func sw_constraint(edges: DirectionalRectEdge = .all,
                            outsideOfOrEqualTo anchors: LayoutDirectionalEdgeAnchors,
                            constant: DirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
 
@@ -98,9 +100,77 @@ public class LayoutDirectionalEdgeAnchors {
         )
     }
 
-    public func constraint(edges: DirectionalRectEdge = .all,
+    @available(iOS, obsoleted:11.0)
+    public func sw_constraint(edges: DirectionalRectEdge = .all,
                            insideOfOrEqualTo anchors: LayoutDirectionalEdgeAnchors,
                            constant: DirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
+
+        guard !edges.isEmpty else {
+            fatalError("At least one edge must be constrained")
+        }
+
+        let topConstraint = edges.contains(.top) ? top.constraint(greaterThanOrEqualTo: anchors.top, constant: constant.top) : nil
+        let leadingConstraint = edges.contains(.leading) ? leading.constraint(greaterThanOrEqualTo: anchors.leading, constant: constant.leading) : nil
+        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(lessThanOrEqualTo: anchors.bottom, constant: constant.bottom) : nil
+        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(lessThanOrEqualTo: anchors.trailing, constant: constant.trailing) : nil
+
+        return LayoutDirectionalEdgeConstraints(
+            top: topConstraint,
+            leading: leadingConstraint,
+            bottom: bottomConstraint,
+            trailing: trailingConstraint
+        )
+    }
+}
+
+@available(iOS 11.0, *)
+extension LayoutDirectionalEdgeAnchors {
+
+    public func constraint(edges: DirectionalRectEdge = .all,
+                           equalTo anchors: LayoutDirectionalEdgeAnchors,
+                           constant: NSDirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
+
+        guard !edges.isEmpty else {
+            fatalError("At least one edge must be constrained")
+        }
+
+        let topConstraint = edges.contains(.top) ? top.constraint(equalTo: anchors.top, constant: constant.top) : nil
+        let leadingConstraint = edges.contains(.leading) ? leading.constraint(equalTo: anchors.leading, constant: constant.leading) : nil
+        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(equalTo: anchors.bottom, constant: constant.bottom) : nil
+        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(equalTo: anchors.trailing, constant: constant.trailing) : nil
+
+        return LayoutDirectionalEdgeConstraints(
+            top: topConstraint,
+            leading: leadingConstraint,
+            bottom: bottomConstraint,
+            trailing: trailingConstraint
+        )
+    }
+
+    public func constraint(edges: DirectionalRectEdge = .all,
+                           outsideOfOrEqualTo anchors: LayoutDirectionalEdgeAnchors,
+                           constant: NSDirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
+
+        guard !edges.isEmpty else {
+            fatalError("At least one edge must be constrained")
+        }
+
+        let topConstraint = edges.contains(.top) ? top.constraint(lessThanOrEqualTo: anchors.top, constant: constant.top) : nil
+        let leadingConstraint = edges.contains(.leading) ? leading.constraint(lessThanOrEqualTo: anchors.leading, constant: constant.leading) : nil
+        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(greaterThanOrEqualTo: anchors.bottom, constant: constant.bottom) : nil
+        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(greaterThanOrEqualTo: anchors.trailing, constant: constant.trailing) : nil
+
+        return LayoutDirectionalEdgeConstraints(
+            top: topConstraint,
+            leading: leadingConstraint,
+            bottom: bottomConstraint,
+            trailing: trailingConstraint
+        )
+    }
+
+    public func constraint(edges: DirectionalRectEdge = .all,
+                           insideOfOrEqualTo anchors: LayoutDirectionalEdgeAnchors,
+                           constant: NSDirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
 
         guard !edges.isEmpty else {
             fatalError("At least one edge must be constrained")
@@ -150,9 +220,28 @@ public class LayoutDirectionalEdgeConstraints {
     }
 
     /// The agregation of all constants of the constraints
-    public var constant: DirectionalEdgeInsets {
+    @available(iOS, obsoleted:11.0)
+    public var sw_constant: DirectionalEdgeInsets {
         get {
             return DirectionalEdgeInsets(
+                top: top?.constant ?? 0,
+                leading: leading?.constant ?? 0,
+                bottom: bottom?.constant ?? 0,
+                trailing: trailing?.constant ?? 0
+            )
+        }
+        set {
+            top?.constant = newValue.top
+            leading?.constant = newValue.leading
+            bottom?.constant = -newValue.bottom
+            trailing?.constant = -newValue.trailing
+        }
+    }
+
+    @available(iOS 11.0, *)
+    public var constant: NSDirectionalEdgeInsets {
+        get {
+            return NSDirectionalEdgeInsets(
                 top: top?.constant ?? 0,
                 leading: leading?.constant ?? 0,
                 bottom: bottom?.constant ?? 0,

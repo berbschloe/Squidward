@@ -24,7 +24,8 @@
 import CoreGraphics
 
 /// Backwards compatable version of `NSDirectionalEdgeInsets`.
-public struct DirectionalEdgeInsets: Equatable, Codable {
+@available(iOS, obsoleted:11.0)
+public struct DirectionalEdgeInsets: Hashable, Codable {
 
     public static let zero = DirectionalEdgeInsets()
 
@@ -52,6 +53,14 @@ public struct DirectionalEdgeInsets: Equatable, Codable {
         self.leading = leading
         self.bottom = bottom
         self.trailing = trailing
+    }
+}
+
+@available(iOS 11.0, *)
+extension DirectionalEdgeInsets {
+
+    public init(insets: NSDirectionalEdgeInsets) {
+        self.init(top: insets.top, leading: insets.leading, bottom: insets.bottom, trailing: insets.trailing)
     }
 }
 

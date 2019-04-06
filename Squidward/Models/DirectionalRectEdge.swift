@@ -24,7 +24,7 @@
 import UIKit
 
 /// Localized version of UIRectEdge
-public struct DirectionalRectEdge: OptionSet {
+public struct DirectionalRectEdge: OptionSet, Hashable, Codable {
 
     public let rawValue: UInt
 

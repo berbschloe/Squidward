@@ -30,7 +30,7 @@ public protocol LayoutConstraintGroup: class {
     var constraints: [NSLayoutConstraint] { get }
 }
 
-public extension LayoutConstraintGroup {
+extension LayoutConstraintGroup {
 
     /**
      Activates the current constraint then returns them to allow for assignment or method chaining.

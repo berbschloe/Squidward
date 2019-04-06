@@ -22,11 +22,13 @@
 //  THE SOFTWARE.
 
 import XCTest
+import UIKit
 import Squidward
 
 class ModelTests: XCTestCase {
 
     func testExpressableByLiteral() {
+        
         let edgeInsets: UIEdgeInsets = 10
         XCTAssertEqual(edgeInsets, UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
 

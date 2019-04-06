@@ -25,7 +25,7 @@
 		77378D9C2205511F00A242D6 /* VerticalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D952205511F00A242D6 /* VerticalInsets.swift */; };
 		77378D9D2205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */; };
 		77378D9E2205511F00A242D6 /* UIEdgeInsets+Squidward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D972205511F00A242D6 /* UIEdgeInsets+Squidward.swift */; };
-		77378DA0220551CD00A242D6 /* ExpressibleByCGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D9F220551CD00A242D6 /* ExpressibleByCGFloatLiteral.swift */; };
+		77378DA0220551CD00A242D6 /* AllInitalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D9F220551CD00A242D6 /* AllInitalizable.swift */; };
 		77378DA22205554200A242D6 /* LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378DA12205554200A242D6 /* LayoutTests.swift */; };
 		77378DA4220555B600A242D6 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378DA3220555B600A242D6 /* ModelTests.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,7 @@
 		77378D952205511F00A242D6 /* VerticalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalInsets.swift; sourceTree = "<group>"; };
 		77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Squidward.swift"; sourceTree = "<group>"; };
 		77378D972205511F00A242D6 /* UIEdgeInsets+Squidward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Squidward.swift"; sourceTree = "<group>"; };
-		77378D9F220551CD00A242D6 /* ExpressibleByCGFloatLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressibleByCGFloatLiteral.swift; sourceTree = "<group>"; };
+		77378D9F220551CD00A242D6 /* AllInitalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllInitalizable.swift; sourceTree = "<group>"; };
 		77378DA12205554200A242D6 /* LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTests.swift; sourceTree = "<group>"; };
 		77378DA3220555B600A242D6 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77004C5222583EAC003B9B39 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				77378D9F220551CD00A242D6 /* AllInitalizable.swift */,
+				77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		77378D59220550F000A242D6 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +118,7 @@
 			children = (
 				77378D7D2205511200A242D6 /* Layout */,
 				77378D902205511F00A242D6 /* Models */,
+				77004C5222583EAC003B9B39 /* Utils */,
 				77378D66220550F000A242D6 /* Squidward.h */,
 				77378D67220550F000A242D6 /* Info.plist */,
 			);
@@ -147,9 +157,7 @@
 				77378D912205511F00A242D6 /* DirectionalEdgeInsets.swift */,
 				77378D942205511F00A242D6 /* DirectionalHorizontalInsets.swift */,
 				77378D932205511F00A242D6 /* DirectionalRectEdge.swift */,
-				77378D9F220551CD00A242D6 /* ExpressibleByCGFloatLiteral.swift */,
 				77378D922205511F00A242D6 /* HorizontalInsets.swift */,
-				77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */,
 				77378D972205511F00A242D6 /* UIEdgeInsets+Squidward.swift */,
 				77378D952205511F00A242D6 /* VerticalInsets.swift */,
 			);
@@ -278,7 +286,7 @@
 				77378D8B2205511200A242D6 /* LayoutConstraintGroup.swift in Sources */,
 				77378D992205511F00A242D6 /* HorizontalInsets.swift in Sources */,
 				77378D892205511200A242D6 /* LayoutEdgeAnchors.swift in Sources */,
-				77378DA0220551CD00A242D6 /* ExpressibleByCGFloatLiteral.swift in Sources */,
+				77378DA0220551CD00A242D6 /* AllInitalizable.swift in Sources */,
 				77378D8F2205511200A242D6 /* LayoutPointAnchors.swift in Sources */,
 				77378D8C2205511200A242D6 /* LayoutHorizontalEdgeAnchors.swift in Sources */,
 				77378D9E2205511F00A242D6 /* UIEdgeInsets+Squidward.swift in Sources */,

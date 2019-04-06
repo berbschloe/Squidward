@@ -23,9 +23,9 @@
 
 import UIKit
 
-public struct DirectionalHorizontalInsets: Equatable {
+public struct DirectionalHorizontalInsets: Hashable, Codable {
 
-    public static var zero = DirectionalHorizontalInsets()
+    public static let zero = DirectionalHorizontalInsets()
 
     /// The leading constant.
     public var leading: CGFloat
