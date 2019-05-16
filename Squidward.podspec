@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.license = "MIT"
     s.author = "Brandon Erbschloe"
     s.platform = :ios, "10.0"
-    s.source = { :git => "https://github.com/berbschloe/squidward.git", :tag => "1.1.0" }
+    s.source = { :git => "https://github.com/berbschloe/squidward.git", :tag => s.version.to_s }
     s.source_files = "Squidward/**/*.{h,m,swift}"
     s.swift_version = "4.2"
 end
