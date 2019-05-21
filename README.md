@@ -39,3 +39,52 @@ It would be recommended to add the library globally because it can get annoying 
 // Add this to a GlobalImports.swift
 @_exported import Squidward
 ```
+
+### Constraints
+
+## Old Way
+
+```swift
+
+let childView = UIView()
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    NSLayoutConstraint.activate([
+        childView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
+        childView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 10),
+        childView.topAnchor.constraint(equalTo: view.topAnchor, constant: -10),
+        childView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+    ])
+}
+```
+
+### Squidward Way
+
+```swift
+let childView = UIView()
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    NSLayoutConstraint.activate([
+        childView.edgeAnchors.constraint(equalTo: view.edgeAnchors, constant: 10)
+    ])
+}
+```
+
+### Variants
+
+```swift
+
+childView.edgeAnchors.constraint(equalTo: view.edgeAnchors) // default zero constant
+
+childView.edgeAnchors.constraint(edges: [.left, .right, .top], equalTo: view.edgeAnchors) // constrain specific edges
+
+childView.edgeAnchors.constraint(
+    equalTo: view.edgeAnchors, 
+    constant: UIEdgeInsets(top: 10, left: 20, bottom: 30, right: 40) // custom insets with no need to apply a negative
+)
+
+```
