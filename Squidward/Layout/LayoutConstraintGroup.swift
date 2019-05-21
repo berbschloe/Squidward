@@ -31,7 +31,6 @@ public protocol LayoutConstraintGroup: class {
 }
 
 extension LayoutConstraintGroup {
-
     /**
      Activates the current constraint then returns them to allow for assignment or method chaining.
 
@@ -108,7 +107,7 @@ extension NSLayoutConstraint {
      Activates a list of constraints. This is much more efficient than calling activate one at a time.
 
      - parameter constraints: The list of constraints to actiavte.
-     - paramater priority: The layout priority all the constraints should be activated at.
+     - parameter priority: The layout priority all the constraints should be activated at.
      */
     public class func activate(_ constraints: [NSLayoutConstraint], at priority: UILayoutPriority) {
         constraints.forEach { $0.priority = priority }
@@ -119,7 +118,7 @@ extension NSLayoutConstraint {
     Activates a list of constraint groups.
  
     - parameter constraints: The list of constraint groups to activate.
-    - paramater priority: The layout priority all the constraints should be activated at.
+    - parameter priority: The layout priority all the constraints should be activated at.
     */
     public class func activate(_ constraints: [LayoutConstraintGroup], at priority: UILayoutPriority = .required) {
         activate(constraints.flatMap { $0.constraints }, at: priority)

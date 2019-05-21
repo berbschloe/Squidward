@@ -65,16 +65,11 @@ public class LayoutDirectionalEdgeAnchors {
             fatalError("At least one edge must be constrained")
         }
 
-        let topConstraint = edges.contains(.top) ? top.constraint(equalTo: anchors.top, constant: constant.top) : nil
-        let leadingConstraint = edges.contains(.leading) ? leading.constraint(equalTo: anchors.leading, constant: constant.leading) : nil
-        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(equalTo: anchors.bottom, constant: constant.bottom) : nil
-        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(equalTo: anchors.trailing, constant: constant.trailing) : nil
-
         return LayoutDirectionalEdgeConstraints(
-            top: topConstraint,
-            leading: leadingConstraint,
-            bottom: bottomConstraint,
-            trailing: trailingConstraint
+            top: edges.contains(.top) ? top.constraint(equalTo: anchors.top, constant: constant.top) : nil,
+            leading: edges.contains(.leading) ? leading.constraint(equalTo: anchors.leading, constant: constant.leading) : nil,
+            bottom: edges.contains(.bottom) ? bottom.constraint(equalTo: anchors.bottom, constant: -constant.bottom) : nil,
+            trailing: edges.contains(.trailing) ? trailing.constraint(equalTo: anchors.trailing, constant: -constant.trailing) : nil
         )
     }
 
@@ -87,16 +82,11 @@ public class LayoutDirectionalEdgeAnchors {
             fatalError("At least one edge must be constrained")
         }
 
-        let topConstraint = edges.contains(.top) ? top.constraint(lessThanOrEqualTo: anchors.top, constant: constant.top) : nil
-        let leadingConstraint = edges.contains(.leading) ? leading.constraint(lessThanOrEqualTo: anchors.leading, constant: constant.leading) : nil
-        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(greaterThanOrEqualTo: anchors.bottom, constant: constant.bottom) : nil
-        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(greaterThanOrEqualTo: anchors.trailing, constant: constant.trailing) : nil
-
         return LayoutDirectionalEdgeConstraints(
-            top: topConstraint,
-            leading: leadingConstraint,
-            bottom: bottomConstraint,
-            trailing: trailingConstraint
+            top: edges.contains(.top) ? top.constraint(lessThanOrEqualTo: anchors.top, constant: constant.top) : nil,
+            leading: edges.contains(.leading) ? leading.constraint(lessThanOrEqualTo: anchors.leading, constant: constant.leading) : nil,
+            bottom: edges.contains(.bottom) ? bottom.constraint(greaterThanOrEqualTo: anchors.bottom, constant: -constant.bottom) : nil,
+            trailing: edges.contains(.trailing) ? trailing.constraint(greaterThanOrEqualTo: anchors.trailing, constant: -constant.trailing) : nil
         )
     }
 
@@ -109,16 +99,11 @@ public class LayoutDirectionalEdgeAnchors {
             fatalError("At least one edge must be constrained")
         }
 
-        let topConstraint = edges.contains(.top) ? top.constraint(greaterThanOrEqualTo: anchors.top, constant: constant.top) : nil
-        let leadingConstraint = edges.contains(.leading) ? leading.constraint(greaterThanOrEqualTo: anchors.leading, constant: constant.leading) : nil
-        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(lessThanOrEqualTo: anchors.bottom, constant: constant.bottom) : nil
-        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(lessThanOrEqualTo: anchors.trailing, constant: constant.trailing) : nil
-
         return LayoutDirectionalEdgeConstraints(
-            top: topConstraint,
-            leading: leadingConstraint,
-            bottom: bottomConstraint,
-            trailing: trailingConstraint
+            top: edges.contains(.top) ? top.constraint(greaterThanOrEqualTo: anchors.top, constant: constant.top) : nil,
+            leading: edges.contains(.leading) ? leading.constraint(greaterThanOrEqualTo: anchors.leading, constant: constant.leading) : nil,
+            bottom: edges.contains(.bottom) ? bottom.constraint(lessThanOrEqualTo: anchors.bottom, constant: -constant.bottom) : nil,
+            trailing: edges.contains(.trailing) ? trailing.constraint(lessThanOrEqualTo: anchors.trailing, constant: -constant.trailing) : nil
         )
     }
 }
@@ -134,16 +119,11 @@ extension LayoutDirectionalEdgeAnchors {
             fatalError("At least one edge must be constrained")
         }
 
-        let topConstraint = edges.contains(.top) ? top.constraint(equalTo: anchors.top, constant: constant.top) : nil
-        let leadingConstraint = edges.contains(.leading) ? leading.constraint(equalTo: anchors.leading, constant: constant.leading) : nil
-        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(equalTo: anchors.bottom, constant: constant.bottom) : nil
-        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(equalTo: anchors.trailing, constant: constant.trailing) : nil
-
         return LayoutDirectionalEdgeConstraints(
-            top: topConstraint,
-            leading: leadingConstraint,
-            bottom: bottomConstraint,
-            trailing: trailingConstraint
+            top: edges.contains(.top) ? top.constraint(equalTo: anchors.top, constant: constant.top) : nil,
+            leading: edges.contains(.leading) ? leading.constraint(equalTo: anchors.leading, constant: constant.leading) : nil,
+            bottom: edges.contains(.bottom) ? bottom.constraint(equalTo: anchors.bottom, constant: -constant.bottom) : nil,
+            trailing: edges.contains(.trailing) ? trailing.constraint(equalTo: anchors.trailing, constant: -constant.trailing) : nil
         )
     }
 
@@ -155,16 +135,11 @@ extension LayoutDirectionalEdgeAnchors {
             fatalError("At least one edge must be constrained")
         }
 
-        let topConstraint = edges.contains(.top) ? top.constraint(lessThanOrEqualTo: anchors.top, constant: constant.top) : nil
-        let leadingConstraint = edges.contains(.leading) ? leading.constraint(lessThanOrEqualTo: anchors.leading, constant: constant.leading) : nil
-        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(greaterThanOrEqualTo: anchors.bottom, constant: constant.bottom) : nil
-        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(greaterThanOrEqualTo: anchors.trailing, constant: constant.trailing) : nil
-
         return LayoutDirectionalEdgeConstraints(
-            top: topConstraint,
-            leading: leadingConstraint,
-            bottom: bottomConstraint,
-            trailing: trailingConstraint
+            top: edges.contains(.top) ? top.constraint(lessThanOrEqualTo: anchors.top, constant: constant.top) : nil,
+            leading: edges.contains(.leading) ? leading.constraint(lessThanOrEqualTo: anchors.leading, constant: constant.leading) : nil,
+            bottom: edges.contains(.bottom) ? bottom.constraint(greaterThanOrEqualTo: anchors.bottom, constant: -constant.bottom) : nil,
+            trailing: edges.contains(.trailing) ? trailing.constraint(greaterThanOrEqualTo: anchors.trailing, constant: -constant.trailing) : nil
         )
     }
 
@@ -176,16 +151,11 @@ extension LayoutDirectionalEdgeAnchors {
             fatalError("At least one edge must be constrained")
         }
 
-        let topConstraint = edges.contains(.top) ? top.constraint(greaterThanOrEqualTo: anchors.top, constant: constant.top) : nil
-        let leadingConstraint = edges.contains(.leading) ? leading.constraint(greaterThanOrEqualTo: anchors.leading, constant: constant.leading) : nil
-        let bottomConstraint = edges.contains(.bottom) ? bottom.constraint(lessThanOrEqualTo: anchors.bottom, constant: constant.bottom) : nil
-        let trailingConstraint = edges.contains(.trailing) ? trailing.constraint(lessThanOrEqualTo: anchors.trailing, constant: constant.trailing) : nil
-
         return LayoutDirectionalEdgeConstraints(
-            top: topConstraint,
-            leading: leadingConstraint,
-            bottom: bottomConstraint,
-            trailing: trailingConstraint
+            top: edges.contains(.top) ? top.constraint(greaterThanOrEqualTo: anchors.top, constant: constant.top) : nil,
+            leading: edges.contains(.leading) ? leading.constraint(greaterThanOrEqualTo: anchors.leading, constant: constant.leading) : nil,
+            bottom: edges.contains(.bottom) ? bottom.constraint(lessThanOrEqualTo: anchors.bottom, constant: -constant.bottom) : nil,
+            trailing: edges.contains(.trailing) ? trailing.constraint(lessThanOrEqualTo: anchors.trailing, constant: -constant.trailing) : nil
         )
     }
 }
@@ -226,8 +196,8 @@ public class LayoutDirectionalEdgeConstraints {
             return DirectionalEdgeInsets(
                 top: top?.constant ?? 0,
                 leading: leading?.constant ?? 0,
-                bottom: bottom?.constant ?? 0,
-                trailing: trailing?.constant ?? 0
+                bottom: -(bottom?.constant ?? 0),
+                trailing: -(trailing?.constant ?? 0)
             )
         }
         set {
@@ -244,8 +214,8 @@ public class LayoutDirectionalEdgeConstraints {
             return NSDirectionalEdgeInsets(
                 top: top?.constant ?? 0,
                 leading: leading?.constant ?? 0,
-                bottom: bottom?.constant ?? 0,
-                trailing: trailing?.constant ?? 0
+                bottom: -(bottom?.constant ?? 0),
+                trailing: -(trailing?.constant ?? 0)
             )
         }
         set {
