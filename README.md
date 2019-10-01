@@ -17,7 +17,7 @@ A collection of additional layout anchor types meant to complement UIKit's exist
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate the library into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'Squidward', '1.2.1'
+pod 'Squidward', '1.2.2'
 ```
 
 ### Swift Package Manager
@@ -26,7 +26,7 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for au
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/berbschloe/Squidward.git", from: "1.2.1")
+    .package(url: "https://github.com/berbschloe/Squidward.git", from: "1.2.2")
 ]
 ```
 
