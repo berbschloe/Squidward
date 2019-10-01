@@ -115,8 +115,8 @@ public class LayoutSizeConstraints {
             return CGSize(width: width.constant, height: height.constant)
         }
         set {
-            width.constant = constant.width
-            height.constant = constant.height
+            width.constant = newValue.width
+            height.constant = newValue.height
         }
     }
 }
