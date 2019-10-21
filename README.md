@@ -42,7 +42,7 @@ It would be recommended to add the library globally because it can get annoying 
 
 ### Constraints
 
-## Old Way
+#### Old Way
 
 ```swift
 
@@ -60,7 +60,7 @@ override func viewDidLoad() {
 }
 ```
 
-### Squidward Way
+#### Squidward Way
 
 ```swift
 let childView = UIView()
@@ -74,7 +74,7 @@ override func viewDidLoad() {
 }
 ```
 
-### Variants
+#### Variants
 
 ```swift
 
