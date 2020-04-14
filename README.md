@@ -3,6 +3,8 @@ A collection of additional layout anchor types meant to complement UIKit's exist
 
 [![Swift](https://img.shields.io/badge/swift-5.0-orange.svg)](https://developer.apple.com/swift/)
 [![CocoaPods](https://img.shields.io/badge/pod-v1.2.2-blue.svg)](https://cocoapods.org/pods/Squidward)
+[![SPM supported](https://img.shields.io/badge/SPM-supported-red.svg?style=flat)](https://swift.org/package-manager)
+[![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)]()
 
 ## Requirements
 
