@@ -21,53 +21,16 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import CoreGraphics
+import UIKit
 
-/// Backwards compatable version of `NSDirectionalEdgeInsets`.
-@available(iOS, obsoleted:11.0)
-public struct DirectionalEdgeInsets: Hashable, Codable {
-
-    public static let zero = DirectionalEdgeInsets()
-
-    /// The top constant.
-    public var top: CGFloat
-
-    /// The leading constant.
-    public var leading: CGFloat
-
-    /// The bottom constant.
-    public var bottom: CGFloat
-
-    /// The trailing constant.
-    public var trailing: CGFloat
-
-    public init() {
-        self.top = 0
-        self.leading = 0
-        self.bottom = 0
-        self.trailing = 0
-    }
-
-    public init(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) {
-        self.top = top
-        self.leading = leading
-        self.bottom = bottom
-        self.trailing = trailing
-    }
-}
-
-@available(iOS 11.0, *)
-extension DirectionalEdgeInsets {
-
-    public init(insets: NSDirectionalEdgeInsets) {
-        self.init(top: insets.top, leading: insets.leading, bottom: insets.bottom, trailing: insets.trailing)
-    }
-}
-
-extension DirectionalEdgeInsets {
+extension NSDirectionalEdgeInsets {
 
     public init(horizontal: CGFloat, vertical: CGFloat) {
         self.init(top: vertical, leading: horizontal, bottom: vertical, trailing: horizontal)
+    }
+    
+    public init(all: CGFloat) {
+        self.init(top: all, leading: all, bottom: all, trailing: all)
     }
 
     public var horizontal: DirectionalHorizontalInsets {
@@ -88,5 +51,19 @@ extension DirectionalEdgeInsets {
             top = newValue.top
             bottom = newValue.bottom
         }
+    }
+}
+
+extension NSDirectionalEdgeInsets: ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: Int) {
+        self.init(all: CGFloat(value))
+    }
+}
+
+extension NSDirectionalEdgeInsets: ExpressibleByFloatLiteral {
+    
+    public init(floatLiteral value: Float) {
+        self.init(all: CGFloat(value))
     }
 }

@@ -28,6 +28,10 @@ extension UIEdgeInsets {
     public init(horizontal: CGFloat, vertical: CGFloat) {
         self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
     }
+    
+    public init(all: CGFloat) {
+        self.init(top: all, left: all, bottom: all, right: all)
+    }
 
     public var horizontal: HorizontalInsets {
         get {
@@ -48,5 +52,19 @@ extension UIEdgeInsets {
             top = newValue.top
             bottom = newValue.bottom
         }
+    }
+}
+
+extension UIEdgeInsets: ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: Int) {
+        self.init(all: CGFloat(value))
+    }
+}
+
+extension UIEdgeInsets: ExpressibleByFloatLiteral {
+    
+    public init(floatLiteral value: Float) {
+        self.init(all: CGFloat(value))
     }
 }

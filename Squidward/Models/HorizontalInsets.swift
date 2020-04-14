@@ -42,4 +42,22 @@ public struct HorizontalInsets: Hashable, Codable {
         self.left = left
         self.right = right
     }
+    
+    public init(all: CGFloat) {
+        self.init(left: all, right: all)
+    }
+}
+
+extension HorizontalInsets: ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: Int) {
+        self.init(all: CGFloat(value))
+    }
+}
+
+extension HorizontalInsets: ExpressibleByFloatLiteral {
+    
+    public init(floatLiteral value: Float) {
+        self.init(all: CGFloat(value))
+    }
 }

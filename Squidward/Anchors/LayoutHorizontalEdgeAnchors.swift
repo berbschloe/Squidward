@@ -81,7 +81,10 @@ public final class LayoutHorizontalEdgeConstraints {
 
     public var constant: HorizontalInsets {
         get {
-            return HorizontalInsets(left: left.constant, right: -right.constant)
+            return HorizontalInsets(
+                left: left.constant,
+                right: -right.constant
+            )
         }
         set {
             left.constant = newValue.left

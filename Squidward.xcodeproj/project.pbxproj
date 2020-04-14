@@ -18,16 +18,16 @@
 		77378D8D2205511200A242D6 /* LayoutVerticalEdgeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D842205511200A242D6 /* LayoutVerticalEdgeAnchors.swift */; };
 		77378D8E2205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D852205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift */; };
 		77378D8F2205511200A242D6 /* LayoutPointAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D862205511200A242D6 /* LayoutPointAnchors.swift */; };
-		77378D982205511F00A242D6 /* DirectionalEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D912205511F00A242D6 /* DirectionalEdgeInsets.swift */; };
 		77378D992205511F00A242D6 /* HorizontalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D922205511F00A242D6 /* HorizontalInsets.swift */; };
 		77378D9A2205511F00A242D6 /* DirectionalRectEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D932205511F00A242D6 /* DirectionalRectEdge.swift */; };
 		77378D9B2205511F00A242D6 /* DirectionalHorizontalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D942205511F00A242D6 /* DirectionalHorizontalInsets.swift */; };
 		77378D9C2205511F00A242D6 /* VerticalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D952205511F00A242D6 /* VerticalInsets.swift */; };
 		77378D9D2205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */; };
 		77378D9E2205511F00A242D6 /* UIEdgeInsets+Squidward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D972205511F00A242D6 /* UIEdgeInsets+Squidward.swift */; };
-		77378DA0220551CD00A242D6 /* AllInitalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D9F220551CD00A242D6 /* AllInitalizable.swift */; };
 		77378DA22205554200A242D6 /* LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378DA12205554200A242D6 /* LayoutTests.swift */; };
 		77378DA4220555B600A242D6 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378DA3220555B600A242D6 /* ModelTests.swift */; };
+		77BEAB8B244617C200FF51E3 /* SGSize+Squidward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BEAB8A244617C200FF51E3 /* SGSize+Squidward.swift */; };
+		77BEAB8D2446181900FF51E3 /* UIOffset+Squidward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BEAB8C2446181900FF51E3 /* UIOffset+Squidward.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,16 +55,16 @@
 		77378D842205511200A242D6 /* LayoutVerticalEdgeAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutVerticalEdgeAnchors.swift; sourceTree = "<group>"; };
 		77378D852205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutDirectionalEdgeAnchors.swift; sourceTree = "<group>"; };
 		77378D862205511200A242D6 /* LayoutPointAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutPointAnchors.swift; sourceTree = "<group>"; };
-		77378D912205511F00A242D6 /* DirectionalEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionalEdgeInsets.swift; sourceTree = "<group>"; };
 		77378D922205511F00A242D6 /* HorizontalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalInsets.swift; sourceTree = "<group>"; };
 		77378D932205511F00A242D6 /* DirectionalRectEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionalRectEdge.swift; sourceTree = "<group>"; };
 		77378D942205511F00A242D6 /* DirectionalHorizontalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionalHorizontalInsets.swift; sourceTree = "<group>"; };
 		77378D952205511F00A242D6 /* VerticalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalInsets.swift; sourceTree = "<group>"; };
 		77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Squidward.swift"; sourceTree = "<group>"; };
 		77378D972205511F00A242D6 /* UIEdgeInsets+Squidward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Squidward.swift"; sourceTree = "<group>"; };
-		77378D9F220551CD00A242D6 /* AllInitalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllInitalizable.swift; sourceTree = "<group>"; };
 		77378DA12205554200A242D6 /* LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTests.swift; sourceTree = "<group>"; };
 		77378DA3220555B600A242D6 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		77BEAB8A244617C200FF51E3 /* SGSize+Squidward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SGSize+Squidward.swift"; sourceTree = "<group>"; };
+		77BEAB8C2446181900FF51E3 /* UIOffset+Squidward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIOffset+Squidward.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		77004C5222583EAC003B9B39 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				77378D9F220551CD00A242D6 /* AllInitalizable.swift */,
-				77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		77378D59220550F000A242D6 = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +107,9 @@
 		77378D65220550F000A242D6 /* Squidward */ = {
 			isa = PBXGroup;
 			children = (
-				77378D7D2205511200A242D6 /* Layout */,
+				77BEAB892446152E00FF51E3 /* Protocols */,
+				77378D7D2205511200A242D6 /* Anchors */,
 				77378D902205511F00A242D6 /* Models */,
-				77004C5222583EAC003B9B39 /* Utils */,
 				77378D66220550F000A242D6 /* Squidward.h */,
 				77378D67220550F000A242D6 /* Info.plist */,
 			);
@@ -135,33 +126,42 @@
 			path = SquidwardTests;
 			sourceTree = "<group>";
 		};
-		77378D7D2205511200A242D6 /* Layout */ = {
+		77378D7D2205511200A242D6 /* Anchors */ = {
 			isa = PBXGroup;
 			children = (
-				77378D822205511200A242D6 /* LayoutConstraintGroup.swift */,
 				77378D852205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift */,
 				77378D7E2205511200A242D6 /* LayoutDirectionalHorizontalEdgeAnchors.swift */,
 				77378D802205511200A242D6 /* LayoutEdgeAnchors.swift */,
-				77378D812205511200A242D6 /* LayoutGuide.swift */,
 				77378D832205511200A242D6 /* LayoutHorizontalEdgeAnchors.swift */,
 				77378D862205511200A242D6 /* LayoutPointAnchors.swift */,
 				77378D7F2205511200A242D6 /* LayoutSizeDemensions.swift */,
 				77378D842205511200A242D6 /* LayoutVerticalEdgeAnchors.swift */,
 			);
-			path = Layout;
+			path = Anchors;
 			sourceTree = "<group>";
 		};
 		77378D902205511F00A242D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				77378D912205511F00A242D6 /* DirectionalEdgeInsets.swift */,
 				77378D942205511F00A242D6 /* DirectionalHorizontalInsets.swift */,
 				77378D932205511F00A242D6 /* DirectionalRectEdge.swift */,
 				77378D922205511F00A242D6 /* HorizontalInsets.swift */,
 				77378D972205511F00A242D6 /* UIEdgeInsets+Squidward.swift */,
+				77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */,
 				77378D952205511F00A242D6 /* VerticalInsets.swift */,
+				77BEAB8A244617C200FF51E3 /* SGSize+Squidward.swift */,
+				77BEAB8C2446181900FF51E3 /* UIOffset+Squidward.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		77BEAB892446152E00FF51E3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				77378D812205511200A242D6 /* LayoutGuide.swift */,
+				77378D822205511200A242D6 /* LayoutConstraintGroup.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,17 +280,17 @@
 				77378D872205511200A242D6 /* LayoutDirectionalHorizontalEdgeAnchors.swift in Sources */,
 				77378D882205511200A242D6 /* LayoutSizeDemensions.swift in Sources */,
 				77378D8E2205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift in Sources */,
+				77BEAB8B244617C200FF51E3 /* SGSize+Squidward.swift in Sources */,
 				77378D9A2205511F00A242D6 /* DirectionalRectEdge.swift in Sources */,
 				77378D9D2205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift in Sources */,
 				77378D9B2205511F00A242D6 /* DirectionalHorizontalInsets.swift in Sources */,
 				77378D9C2205511F00A242D6 /* VerticalInsets.swift in Sources */,
-				77378D982205511F00A242D6 /* DirectionalEdgeInsets.swift in Sources */,
 				77378D8B2205511200A242D6 /* LayoutConstraintGroup.swift in Sources */,
 				77378D992205511F00A242D6 /* HorizontalInsets.swift in Sources */,
 				77378D892205511200A242D6 /* LayoutEdgeAnchors.swift in Sources */,
-				77378DA0220551CD00A242D6 /* AllInitalizable.swift in Sources */,
 				77378D8F2205511200A242D6 /* LayoutPointAnchors.swift in Sources */,
 				77378D8C2205511200A242D6 /* LayoutHorizontalEdgeAnchors.swift in Sources */,
+				77BEAB8D2446181900FF51E3 /* UIOffset+Squidward.swift in Sources */,
 				77378D9E2205511F00A242D6 /* UIEdgeInsets+Squidward.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +449,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Squidward/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +476,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Squidward/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -84,7 +84,10 @@ public final class LayoutDirectionalHorizonalConstraints {
 
     public var constant: DirectionalHorizontalInsets {
         get {
-            return DirectionalHorizontalInsets(leading: leading.constant, trailing: -trailing.constant)
+            return DirectionalHorizontalInsets(
+                leading: leading.constant,
+                trailing: -trailing.constant
+            )
         }
         set {
             leading.constant = newValue.leading

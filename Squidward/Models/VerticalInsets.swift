@@ -42,4 +42,23 @@ public struct VerticalInsets: Equatable {
         self.top = top
         self.bottom = bottom
     }
+    
+    public init(all: CGFloat) {
+        self.init(top: all, bottom: all)
+    }
 }
+
+extension VerticalInsets: ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: Int) {
+        self.init(all: CGFloat(value))
+    }
+}
+
+extension VerticalInsets: ExpressibleByFloatLiteral {
+    
+    public init(floatLiteral value: Float) {
+        self.init(all: CGFloat(value))
+    }
+}
+

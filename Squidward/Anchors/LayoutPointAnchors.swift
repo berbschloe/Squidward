@@ -150,7 +150,10 @@ public final class LayoutPointConstraints {
     /// A constant that can be applied the the x and y constraints
     public var constant: UIOffset {
         get {
-            return UIOffset(horizontal: xAxis.constant, vertical: yAxis.constant)
+            return UIOffset(
+                horizontal: xAxis.constant,
+                vertical: yAxis.constant
+            )
         }
         set {
             xAxis.constant = newValue.horizontal

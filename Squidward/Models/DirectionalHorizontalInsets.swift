@@ -37,9 +37,27 @@ public struct DirectionalHorizontalInsets: Hashable, Codable {
         self.leading = 0
         self.trailing = 0
     }
+    
+    public init(all: CGFloat) {
+        self.init(leading: all, trailing: all)
+    }
 
     public init(leading: CGFloat, trailing: CGFloat) {
         self.leading = leading
         self.trailing = trailing
+    }
+}
+
+extension DirectionalHorizontalInsets: ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: Int) {
+        self.init(all: CGFloat(value))
+    }
+}
+
+extension DirectionalHorizontalInsets: ExpressibleByFloatLiteral {
+    
+    public init(floatLiteral value: Float) {
+        self.init(all: CGFloat(value))
     }
 }
