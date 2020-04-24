@@ -8,9 +8,9 @@ A collection of additional layout anchor types meant to complement UIKit's exist
 
 ## Requirements
 
-- iOS 11.0+
+- iOS 11.+
 - Xcode 11.+
-- Swift 5.0+
+- Swift 5.+
 
 ## Instalation
 
