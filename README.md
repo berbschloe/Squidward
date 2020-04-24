@@ -2,14 +2,14 @@
 A collection of additional layout anchor types meant to complement UIKit's existing constraint system.
 
 [![Swift](https://img.shields.io/badge/swift-5.0-orange.svg)](https://developer.apple.com/swift/)
-[![CocoaPods](https://img.shields.io/badge/pod-v1.2.2-blue.svg)](https://cocoapods.org/pods/Squidward)
+[![CocoaPods](https://img.shields.io/badge/pod-v1.3.0-blue.svg)](https://cocoapods.org/pods/Squidward)
 [![SPM supported](https://img.shields.io/badge/SPM-supported-red.svg?style=flat)](https://swift.org/package-manager)
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)]()
 
 ## Requirements
 
-- iOS 9.0+
-- Xcode 10.2+
+- iOS 11.0+
+- Xcode 11.+
 - Swift 5.0+
 
 ## Instalation
@@ -19,7 +19,7 @@ A collection of additional layout anchor types meant to complement UIKit's exist
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate the library into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'Squidward', '1.2.2'
+pod 'Squidward', '1.3.0'
 ```
 
 ### Swift Package Manager
@@ -28,7 +28,7 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for au
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/berbschloe/Squidward.git", from: "1.2.2")
+    .package(url: "https://github.com/berbschloe/Squidward.git", from: "1.3.0")
 ]
 ```
 
