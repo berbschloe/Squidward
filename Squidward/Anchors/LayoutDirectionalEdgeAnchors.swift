@@ -56,7 +56,7 @@ public class LayoutDirectionalEdgeAnchors {
 
      - returns: The newly constructed set of deactivated layout edge constraints.
      */
-    public func constraint(edges: DirectionalRectEdge = .all,
+    public func constraint(edges: NSDirectionalRectEdge = .all,
                            equalTo anchors: LayoutDirectionalEdgeAnchors,
                            constant: NSDirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
 
@@ -72,7 +72,7 @@ public class LayoutDirectionalEdgeAnchors {
         )
     }
 
-    public func constraint(edges: DirectionalRectEdge = .all,
+    public func constraint(edges: NSDirectionalRectEdge = .all,
                            outsideOfOrEqualTo anchors: LayoutDirectionalEdgeAnchors,
                            constant: NSDirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
 
@@ -88,7 +88,7 @@ public class LayoutDirectionalEdgeAnchors {
         )
     }
 
-    public func constraint(edges: DirectionalRectEdge = .all,
+    public func constraint(edges: NSDirectionalRectEdge = .all,
                            insideOfOrEqualTo anchors: LayoutDirectionalEdgeAnchors,
                            constant: NSDirectionalEdgeInsets = .zero) -> LayoutDirectionalEdgeConstraints {
 

@@ -19,7 +19,6 @@
 		77378D8E2205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D852205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift */; };
 		77378D8F2205511200A242D6 /* LayoutPointAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D862205511200A242D6 /* LayoutPointAnchors.swift */; };
 		77378D992205511F00A242D6 /* HorizontalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D922205511F00A242D6 /* HorizontalInsets.swift */; };
-		77378D9A2205511F00A242D6 /* DirectionalRectEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D932205511F00A242D6 /* DirectionalRectEdge.swift */; };
 		77378D9B2205511F00A242D6 /* DirectionalHorizontalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D942205511F00A242D6 /* DirectionalHorizontalInsets.swift */; };
 		77378D9C2205511F00A242D6 /* VerticalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D952205511F00A242D6 /* VerticalInsets.swift */; };
 		77378D9D2205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */; };
@@ -56,7 +55,6 @@
 		77378D852205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutDirectionalEdgeAnchors.swift; sourceTree = "<group>"; };
 		77378D862205511200A242D6 /* LayoutPointAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutPointAnchors.swift; sourceTree = "<group>"; };
 		77378D922205511F00A242D6 /* HorizontalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalInsets.swift; sourceTree = "<group>"; };
-		77378D932205511F00A242D6 /* DirectionalRectEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionalRectEdge.swift; sourceTree = "<group>"; };
 		77378D942205511F00A242D6 /* DirectionalHorizontalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionalHorizontalInsets.swift; sourceTree = "<group>"; };
 		77378D952205511F00A242D6 /* VerticalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalInsets.swift; sourceTree = "<group>"; };
 		77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Squidward.swift"; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				77378D942205511F00A242D6 /* DirectionalHorizontalInsets.swift */,
-				77378D932205511F00A242D6 /* DirectionalRectEdge.swift */,
 				77378D922205511F00A242D6 /* HorizontalInsets.swift */,
 				77378D972205511F00A242D6 /* UIEdgeInsets+Squidward.swift */,
 				77378D962205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift */,
@@ -281,7 +278,6 @@
 				77378D882205511200A242D6 /* LayoutSizeDemensions.swift in Sources */,
 				77378D8E2205511200A242D6 /* LayoutDirectionalEdgeAnchors.swift in Sources */,
 				77BEAB8B244617C200FF51E3 /* SGSize+Squidward.swift in Sources */,
-				77378D9A2205511F00A242D6 /* DirectionalRectEdge.swift in Sources */,
 				77378D9D2205511F00A242D6 /* NSDirectionalEdgeInsets+Squidward.swift in Sources */,
 				77378D9B2205511F00A242D6 /* DirectionalHorizontalInsets.swift in Sources */,
 				77378D9C2205511F00A242D6 /* VerticalInsets.swift in Sources */,
