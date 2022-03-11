@@ -1,7 +1,7 @@
 # Squidward
 A collection of additional layout anchor types meant to complement UIKit's existing constraint system.
 
-[![Swift](https://img.shields.io/badge/swift-5.0-orange.svg)](https://developer.apple.com/swift/)
+[![Swift](https://img.shields.io/badge/swift-5.5-orange.svg)](https://developer.apple.com/swift/)
 [![CocoaPods](https://img.shields.io/badge/pod-v1.4.0-blue.svg)](https://cocoapods.org/pods/Squidward)
 [![SPM supported](https://img.shields.io/badge/SPM-supported-red.svg?style=flat)](https://swift.org/package-manager)
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)]()
@@ -10,7 +10,7 @@ A collection of additional layout anchor types meant to complement UIKit's exist
 
 - iOS 13
 - Xcode 13
-- Swift 5
+- Swift 5.5
 
 ## Instalation
 
