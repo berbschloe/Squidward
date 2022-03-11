@@ -24,7 +24,7 @@
 import UIKit
 
 /// The minimum collection of anchors needed to describe a `UILayoutGuide`
-public protocol LayoutGuide {
+public protocol LayoutGuide: AnyObject {
 
     /// A directional layout anchor representing the leading edge of the layout guide’s frame.
     var leadingAnchor: NSLayoutXAxisAnchor { get }

@@ -24,7 +24,7 @@
 import UIKit
 
 /// Any object that can store a group of constraints
-public protocol LayoutConstraintGroup: class {
+public protocol LayoutConstraintGroup: AnyObject {
 
     /// The constraints that are grouped together.
     var constraints: [NSLayoutConstraint] { get }
