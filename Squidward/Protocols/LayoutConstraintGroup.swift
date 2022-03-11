@@ -113,6 +113,11 @@ extension NSLayoutConstraint {
         constraints.forEach { $0.priority = priority }
         activate(constraints)
     }
+    
+    /// Activates a block of constraints.
+    public class func activate(@LayoutConstraintBuilder _ constraints: () -> [NSLayoutConstraint]) {
+        activate(constraints())
+    }
 
     /**
     Activates a list of constraint groups.
@@ -123,6 +128,11 @@ extension NSLayoutConstraint {
     public class func activate(_ constraints: [LayoutConstraintGroup], at priority: UILayoutPriority = .required) {
         activate(constraints.flatMap { $0.constraints }, at: priority)
     }
+    
+    /// Activates a block of constraint groups.
+    public class func activate(@LayoutConstraintGroupBuilder _ constraints: () -> [LayoutConstraintGroup]) {
+        activate(constraints())
+    }
 
     /**
     Deactivates a list of constraint groups.
@@ -131,5 +141,17 @@ extension NSLayoutConstraint {
      */
     public class func deactivate(_ constraints: [LayoutConstraintGroup]) {
         deactivate(constraints.flatMap { return $0.constraints })
+    }
+}
+
+@resultBuilder public enum LayoutConstraintBuilder {
+    public static func buildBlock(_ partialResults: NSLayoutConstraint...) -> [NSLayoutConstraint] {
+        return partialResults
+    }
+}
+
+@resultBuilder public enum LayoutConstraintGroupBuilder {
+    public static func buildBlock(_ partialResults: LayoutConstraintGroup...) -> [LayoutConstraintGroup] {
+        return partialResults
     }
 }

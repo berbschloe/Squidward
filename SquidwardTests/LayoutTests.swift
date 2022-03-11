@@ -53,10 +53,10 @@ class LayoutTests: XCTestCase {
         var constraint: LayoutEdgeConstraints!
         let insets = UIEdgeInsets(top: 10, left: 20, bottom: 30, right: 40)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate {
             view.edgeAnchors.constraint(equalTo: superView.edgeAnchors, constant: insets)
                 .assign(to: &constraint)
-        ])
+        }
 
         XCTAssertEqual(insets, constraint.constant)
     }
@@ -66,10 +66,10 @@ class LayoutTests: XCTestCase {
         var constraint: LayoutDirectionalEdgeConstraints!
         let insets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 30, trailing: 40)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate {
             view.directionalEdgeAnchors.constraint(equalTo: superView.directionalEdgeAnchors, constant: insets)
                 .assign(to: &constraint)
-        ])
+        }
 
         XCTAssertEqual(insets, constraint.constant)
     }
@@ -79,9 +79,9 @@ class LayoutTests: XCTestCase {
         var constraint: LayoutSizeConstraints!
         let size = CGSize(width: 10, height: 20)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate {
             view.sizeAnchors.constraint(equalToConstant: size).assign(to: &constraint)
-        ])
+        }
 
         XCTAssertEqual(size, constraint.constant)
     }
@@ -90,9 +90,9 @@ class LayoutTests: XCTestCase {
         var constraint: LayoutPointConstraints!
         let offset = UIOffset(horizontal: 10, vertical: 20)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate {
             view.centerAnchors.constraint(equalTo: superView.centerAnchors, constant: offset).assign(to: &constraint)
-        ])
+        }
 
         XCTAssertEqual(offset, constraint.constant)
     }
@@ -102,9 +102,9 @@ class LayoutTests: XCTestCase {
         var constraint: LayoutHorizontalEdgeConstraints!
         let insets = HorizontalInsets(left: 10, right: 20)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate {
             view.horizontalEdgeAnchors.constraint(equalTo: superView.horizontalEdgeAnchors, constant: insets).assign(to: &constraint)
-        ])
+        }
 
         XCTAssertEqual(insets, constraint.constant)
     }
@@ -114,9 +114,9 @@ class LayoutTests: XCTestCase {
         var constraint: LayoutDirectionalHorizonalConstraints!
         let insets = DirectionalHorizontalInsets(leading: 10, trailing: 20)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate {
             view.directionalHorizontalEdgeAnchors.constraint(equalTo: superView.directionalHorizontalEdgeAnchors, constant: insets).assign(to: &constraint)
-        ])
+        }
 
         XCTAssertEqual(insets, constraint.constant)
     }
@@ -126,9 +126,9 @@ class LayoutTests: XCTestCase {
         var constraint: LayoutVerticalEdgeConstraints!
         let insets = VerticalInsets(top: 10, bottom: 20)
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate {
             view.verticalEdgeAnchors.constraint(equalTo: superView.verticalEdgeAnchors, constant: insets).assign(to: &constraint)
-        ])
+        }
 
         XCTAssertEqual(insets, constraint.constant)
     }
@@ -141,15 +141,15 @@ class LayoutTests: XCTestCase {
         let viewInsets = UIEdgeInsets(horizontal: 5, vertical: 10)
         let otherViewInsets = UIEdgeInsets(horizontal: 15, vertical: 20)
 
-        NSLayoutConstraint.activate([
-            view.sizeAnchors.constraint(equalToConstant: viewSize),
-            otherView.sizeAnchors.constraint(equalToConstant: otherViewSize),
+        NSLayoutConstraint.activate {
+            view.sizeAnchors.constraint(equalToConstant: viewSize)
+            otherView.sizeAnchors.constraint(equalToConstant: otherViewSize)
 
-            view.edgeAnchors.constraint(insideOfOrEqualTo: superView.edgeAnchors, constant: viewInsets),
-            otherView.edgeAnchors.constraint(insideOfOrEqualTo: superView.edgeAnchors, constant: otherViewInsets),
+            view.edgeAnchors.constraint(insideOfOrEqualTo: superView.edgeAnchors, constant: viewInsets)
+            otherView.edgeAnchors.constraint(insideOfOrEqualTo: superView.edgeAnchors, constant: otherViewInsets)
 
             otherView.topLeftAnchors.constraint(equalTo: view.bottomRightAnchors)
-        ])
+        }
 
         // update view frames
         superView.layoutIfNeeded()
