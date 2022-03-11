@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = "Squidward"
-    s.version = "1.4.0"
+    s.version = "1.4.1"
     s.summary = "A collection of additional layout anchor types meant to complement UIKit's existing constraint system."
     s.homepage = "https://github.com/berbschloe/squidward"
     s.license = "MIT"
