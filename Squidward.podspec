@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
     s.platform = :ios, "13.0"
     s.source = { :git => "https://github.com/berbschloe/squidward.git", :tag => s.version.to_s }
     s.source_files = "Squidward/**/*.{h,m,swift}"
-    s.swift_version = "5.5
+    s.swift_version = "5.5"
 end
