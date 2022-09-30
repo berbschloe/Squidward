@@ -6,7 +6,7 @@
 //  Copyright © 2020 Brandon Erbschloe. All rights reserved.
 //
 
-import CoreGraphics
+import UIKit
 
 extension UIOffset {
     
